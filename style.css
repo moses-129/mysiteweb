@@ -1,0 +1,211 @@
+/* === GENERAL STYLES === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: lightblue;
+  color: blue;
+  line-height: 1.6;
+  padding: 20px;
+}
+.about-me{
+text-align:center;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* === LINKS & PSEUDO-CLASSES === */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* === NAVIGATION BARS === */
+nav.horizontal a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+}
+
+nav.horizontal a:hover {
+  background-color: #666;
+}
+
+nav.vertical {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+nav.vertical a {
+  padding: 10px;
+  background: #ccc;
+  border-bottom: 1px solid #aaa;
+}
+
+/* === CONTAINERS & LAYOUT === */
+header, footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  margin: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* 2-Column Layout for About Page */
+.about-container {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* 3-Column Grid for Portfolio Page */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* === LIST STYLING === */
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+/* === FORMS === */
+form {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+button, input[type="submit"] {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* === TABLE STYLING === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #ddd;
+}
+
+/* === POSITIONING EXAMPLES === */
+.banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.overlay {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  z-index: 500;
+}
+
+/* === PRINT-FRIENDLY STYLES === */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  nav, footer, .no-print {
+    display: none;
+  }
+
+  .resume-section {
+    page-break-after: always;
+  }
+}
